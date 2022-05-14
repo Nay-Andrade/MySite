@@ -1,0 +1,173 @@
+* {
+    padding: 0;
+    margin: 0;
+    color: #000; 
+    font-family: 'Nunito', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Mono', monospace;
+    font-family: 'Water Brush', cursive;
+   
+   }
+
+   #Logo {
+       height: 150px;
+       height: 150x;
+       border-radius: 50%;
+   }
+
+   ul {
+       list-style: none;
+       font-style: italic;
+   }
+
+   a {
+       text-decoration: none;
+       /* esse 600 é do link do googlefonts no html */
+       font-weight: 600;
+   }
+
+   body {
+       /* background-image: url(./pexels-suzy-hazelwood-1629236.jpg);
+       background-repeat: no-repeat;
+       background-position: center center fixed; */
+       background: url(./pexels-pixabay-235985.jpg) no-repeat center center fixed;
+       background-size: cover;
+      
+   }
+
+   header{
+       display: flex;
+       justify-content:space-around;
+       align-items: center;
+       /* border-bottom: 1px solid #fff; */
+       box-shadow: 1px 1px 10px 1px #FFFF;
+      /* borda ridge efeito 3D */
+       /* border-bottom: 15px ridge #FFFF; */
+       margin-bottom: 45px;
+
+
+   }
+
+   header ul {
+       display: flex;
+   }
+
+   header ul li {
+       padding: 5px;
+       /* dashed deixa uma linha pontilhada */
+       /*border-bottom: 3px dashed #fff;  */
+   }
+
+   header ul li a:hover {
+       color: chocolate;
+   }
+
+   .container {
+       text-align: center;
+   }
+   .container .name h1 {
+       font-size: 30px;
+   }
+
+   #arrow {
+       font-size: 35px;
+       cursor: pointer;
+       /* blink - piscando / steps-intervalo da função */
+       animation: blink 1s steps(5, start) infinite;
+   }
+
+    /* necessário para animação funcionar, keyframes chama a animação: por essa razão colocar
+    nome após como abaixo, chamei animação de blink, chamando então blink */
+   @keyframes blink {
+       to {
+           visibility: hidden;
+       }
+   }
+
+   #animation {
+       transition: 300ms;
+   }
+
+   .rotate {
+       transform: rotate(180deg);
+       /* coloca-se o transition para que não mude de posição apenas, mas sim gire com certa lentidão */
+       transition: 300ms;
+   }
+
+   .active { 
+       /* usa-se o !important pq o inline ele é absoluto, e como aqui tentamos subscrever em display um estilo absoluto */
+       display: block !important;
+   }
+
+   #about p {
+       max-width: 600px;
+       /* ajustar sem necessariamente colocar tamanho de margem */
+       margin: 0 auto;
+   }
+
+   /* é necessário definir pois caso não irá aparecer tamanho maior que é, e não é necessário
+   aos olhos do usuário */
+  
+   .form {
+       width: 40%;
+       margin: 0 auto;
+       /* thick - grossa / double-dupla */
+       border: thick double black;
+       padding: 25px;
+       margin-top: 30px;
+   } 
+
+   .form input {
+       width: 50%;
+       padding: 5px 10px;
+       border: none;
+       border-radius: 5px 0px 0px 5px;
+    
+   }
+
+   .form button {
+       width: 15%;
+       padding: 5px 10px;
+       background: linear-gradient (to right, #c09717 50%, chocolate 50%);
+       background-size: 200% 100%;
+       background-position: right bottom;
+       color: #464646;
+       font-weight: 600;
+       border: none;
+       cursor: pointer;
+       transition: all 300ms ease-out;
+       border-radius: 0px 5px 5px 0px; 
+       /* linha abaixo usada para tirar o espaço entre os botoes email e enviar */
+       margin-left: -5px;
+       margin-top: 20px;
+   }
+
+   .form button:hover {
+       background-position: left bottom;
+       color: #000;
+   }
+
+
+   /* tela de iPad */
+   @media only screen and(max-width: 4768px) {
+       .form button {
+           width: 150%;
+       }
+
+   }
+
+   /* tela iPhone 6/7/8 plus e outros */
+   @media only screen and(max-width: 480px) {
+    .container .name h1 {
+        font-size: 1px;
+    }
+    .container .name h4 {
+        font-size: 6px;
+    }
+    /*  não está sendo aplicado, encontrar erro */
+    #about p {
+        max-width: 40%;
+        text-align: justify;
+    }
+
+   }

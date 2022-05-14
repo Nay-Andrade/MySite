@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/b953145719.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,500;0,600;0,
+    800;1,200;1,300&family=Roboto+Mono:ital,wght@0,300;0,500;0,600;0,700;1,
+    100&family=Roboto:wght@100&family=Water+Brush&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Nay Andrade</title>
+   
+</head>
+<body>
+
+    <header>
+        <div>
+            <img id="Logo" src="Naylogo.jpeg" alt="Logo Nay Andrade"/>
+            
+        </div>
+        <ul> 
+            <li>
+                <a target="_blank" href="https://github.com/Nay-Andrade">GitHub</a>
+            </li>
+            <li>
+                <a target="_blank" href="mailto:naandrade8@gmail.com">E-mail</a>
+            </li>
+            <li>
+                <a target="_blank" href="https://wa.me/11941542570">Me chama para um café!</a>
+            </li>
+        </ul>
+    </header>
+    <main>
+        <section class="container">
+            <div class="name">
+                <h1>Nay Andrade</h1>
+                <h4>Aspirante a programação!</h4>
+            </div>
+            <div onclick="displayAbout()" id="arrow">
+                <i id="animation" class="fa-solid fa-caret-down"></i>
+            </div>
+            <div style="display: none;" id="about">
+                <p>
+                    A mina de TI que teve medo de entrar na área lá quando se formou em 2012.
+                    Agora com mais de coragem, se torna aspirante a programação já atuando
+                    na área de suporte como Analista N2. E bora [re]programar o mundo!
+                </p>
+            </div>
+            <div class="form">
+                <div>
+                    <p>Deixe seu contato.</p>
+                </div>
+                <form action="">
+                    <input type="text" placeholder="Seu melhor e-mail :D">
+                    <button>Enviar!</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <script> //add displayAbout no arrow, pois quando clicarmos nela vai buscar e adicionar
+        function displayAbout() { 
+            // chama o elemento do ID que criamos acima do about
+            var arrow = document.getElementById('animation')
+            arrow.classList.toggle('rotate');
+
+            var display = document.getElementById('about')
+            display.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
